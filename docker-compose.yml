@@ -1,0 +1,14 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:8.0.38
+    container_name: kuke-board-mysql
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=article
+
+networks:
+  default:
+    driver: bridge
